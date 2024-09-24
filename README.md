@@ -42,12 +42,13 @@ To run this project locally, follow the instructions below.
    ```
 2. **Install dependencies**:
    ```bash
-   npm install legacy-peer-deps=true
+   npm install legacy-peer-deps
    ```
 3. **Start the development server:**
    ```bash
    npm run dev
    Open your browser and navigate to http://localhost:5173 to view the application. 🌐
+   ```
 
 You can now interact with the comments section by adding or deleting comments! ✍️
 
