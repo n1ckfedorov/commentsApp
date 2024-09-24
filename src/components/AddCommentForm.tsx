@@ -2,10 +2,10 @@ import useCommentText from '@/hooks/useCommentText'; // Импортируем �
 import { addComment } from '@/store/comments/commentsSlice';
 import { RootState } from '@/store/store';
 import { zodResolver } from '@hookform/resolvers/zod';
+import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { z } from 'zod';
-
 interface CommentFormValues {
   body: string;
 }
@@ -27,7 +27,7 @@ const AddCommentForm: React.FC = () => {
     resolver: zodResolver(schema),
   });
 
-  const { handleChange } = useCommentText(setValue); // Используем хук
+  const { handleChange } = useCommentText(setValue);
 
   const onSubmit: SubmitHandler<CommentFormValues> = (data) => {
     const maxId = comments.length > 0 ? Math.max(...comments.map((comment) => comment.id)) : 0;

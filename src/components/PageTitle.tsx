@@ -1,7 +1,11 @@
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const PageTitle = ({ title }) => {
+interface PageTitleProps {
+  title: string;
+}
+
+const PageTitle: FC<PageTitleProps> = ({ title }) => {
   const location = useLocation();
 
   useEffect(() => {

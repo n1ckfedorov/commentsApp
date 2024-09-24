@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
+import { UseFormSetValue } from 'react-hook-form';
 
-const useCommentText = (setValue: (name: string, value: string) => void) => {
+interface CommentFormValues {
+  body: string; // Add other fields if necessary
+}
+
+const useCommentText = (setValue: UseFormSetValue<CommentFormValues>) => {
   useEffect(() => {
     const savedText = sessionStorage.getItem('commentText');
     if (savedText) {

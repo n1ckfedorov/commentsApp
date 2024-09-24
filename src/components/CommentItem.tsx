@@ -1,6 +1,5 @@
 import { CommentDTO } from '@/services/comments';
-import { FC } from 'react';
-
+import React, { FC } from 'react';
 interface CommentProps {
   comment: CommentDTO;
   onDelete: (id: number) => void;

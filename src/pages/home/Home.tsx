@@ -1,10 +1,11 @@
 import { CommentItem } from '@/components';
 import AddCommentForm from '@/components/AddCommentForm';
+
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
 import { fetchAllComments } from '@/services/comments';
 import { removeComment, setComments } from '@/store/comments/commentsSlice';
 import { RootState } from '@/store/store';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Home = () => {
